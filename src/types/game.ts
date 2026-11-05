@@ -1,4 +1,4 @@
-export type GameMode = 'story' | 'sandbox' | 'academy' | 'expansions' | 'analytics';
+export type GameMode = 'rpg' | 'story' | 'sandbox' | 'academy' | 'expansions' | 'analytics';
 
 export type MarketSentiment = 'BOOM' | 'BULL' | 'NORMAL' | 'BEAR' | 'CRASH' | 'STAGFLATION';
 
