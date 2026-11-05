@@ -46,8 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   const navItems: { mode: GameMode; label: string; icon: React.ReactNode; badge?: string }[] = [
-    { mode: 'rpg', label: 'Prosperity City RPG', icon: <Gamepad2 className="w-4 h-4 text-emerald-400" />, badge: 'WORLD' },
-    { mode: 'story', label: 'Executive Odyssey', icon: <Compass className="w-4 h-4" /> },
+    { mode: 'story', label: 'Life Odyssey', icon: <Compass className="w-4 h-4" /> },
     { mode: 'sandbox', label: 'Wealth Lab', icon: <FlaskConical className="w-4 h-4" />, badge: 'Sim' },
     { mode: 'academy', label: 'Academy', icon: <GraduationCap className="w-4 h-4" />, badge: `${state.totalXP} XP` },
     { mode: 'expansions', label: 'Expansions', icon: <Puzzle className="w-4 h-4" />, badge: `${state.activeExpansionIds.length}` },

@@ -22,7 +22,6 @@ import { AcademyHub } from './components/Academy/AcademyHub';
 import { ExpansionManagerView } from './components/Expansions/ExpansionManager';
 import { PortfolioAnalytics } from './components/Analytics/PortfolioAnalytics';
 import { ArchetypeSelectorModal } from './components/ArchetypeSelectorModal';
-import { GameCanvas } from './game/engine/GameCanvas';
 
 import { 
   Compass, 
@@ -37,7 +36,7 @@ import {
 
 export function App() {
   const [state, setState] = useState<GameState>(() => createInitialGameState('archetype_fresh_grad'));
-  const [activeMode, setActiveMode] = useState<GameMode>('rpg'); // Default to 2D City RPG Game!
+  const [activeMode, setActiveMode] = useState<GameMode>('story');
   const [storySubTab, setStorySubTab] = useState<'overview' | 'market' | 'banking' | 'career' | 'retirement'>('overview');
   
   // Modals
@@ -101,18 +100,7 @@ export function App() {
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         
-        {/* MODE 0: PROSPERITY CITY (2D RPG OPEN WORLD) */}
-        {activeMode === 'rpg' && (
-          <div className="space-y-4">
-            <GameCanvas
-              state={state}
-              onUpdateState={(ns) => setState(ns)}
-              onSwitchToExecutiveMode={() => setActiveMode('story')}
-            />
-          </div>
-        )}
-
-        {/* MODE 1: STORY / EXECUTIVE ODYSSEY */}
+        {/* MODE 1: STORY / LIFE ODYSSEY */}
         {activeMode === 'story' && (
           <div className="space-y-6">
             
